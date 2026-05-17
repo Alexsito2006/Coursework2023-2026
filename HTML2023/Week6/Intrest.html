@@ -1,0 +1,26 @@
+<html>
+    <title>Intrest Calculator</title>
+    <script>
+        function Intrest()
+        {
+            P = parseFloat(document.getElementById("P").value);
+            R = parseFloat(document.getElementById("R").value);
+            T = parseFloat(document.getElementById ("T").value);
+            Intrest = P * R * T;
+            document.getElementById('Intrest').value = Intrest;
+        }
+    </script>
+    <body>
+        P: <input type="text" id="P"/>
+        <br />
+        R: <input type="text" id="R"/>
+        <br />
+        T: <input type="text" id="T"/>
+        <br />
+    </body>
+    <input type="button" value="calculate" 
+        onclick="Intrest();"/> <br />
+    Intrest: <input type="text" id="Intrest"/>
+        <br />
+
+</html>

@@ -1,0 +1,34 @@
+<html>
+    <head>
+      <script>
+        function multNumbers()
+        {
+            t1 = parseInt(document.getElementById('num').value);
+            thesum1 = 1;
+            for (index = 1; index < t1 + 1; index++) {
+                thesum1 = thesum1 * index;
+            }
+            let i = 1;
+            thesum2 = 1;
+            while (i <= t1 + 1) {
+                thesum2 = thesu2 * i;
+                i++;
+            }
+            document.getElementById('thesum1').value = thesum1;
+            document.getElementById('thesum2').value = thesum2;
+        }
+      </script>  
+    </head>
+    <body>
+        Multiplacation Program
+        <br />
+        Number! <input type="text" id="num"/>
+        <br />
+        <input type="button" value="calculate" onclick="multNumbers();"/>
+        <br />
+        <input type="text" id="thesum1"/>
+        <br>
+        <input type="text" id="thdsum2"/>
+
+    </body>
+</html>

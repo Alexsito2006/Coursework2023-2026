@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+function addit() {
+    var sel = document.getElementById("list");
+    var option = document.createElement("option");
+
+    var n1 = document.getElementById("num1");
+    option.text = n1.value;
+
+    sel.add(option);
+    n1.value = "";
+    n1.focus();
+}
+function clearit() {
+    var sel = document.getElementById("list");
+    while (sel.length > 0)
+        sel.remove(0);
+}
+function removeit() {
+    var sel = document.getElementById("list");
+    if (sel.selectedIndex > -1) {
+        sel.remove(sel.selectedIndex);
+    }
+}
+function sumit() {
+    var sel = document.getElementById("list");
+    var ans = document.getElementById("answer");
+    var sum = 0;
+    for (var x = 0; x < sel.length; x++) {
+        sum += parseInt(sel.options[x].text);
+    }
+    ans.value = sum;
+    return sum; // Return the sum
+}
+function averageit() {
+    var sel = document.getElementById("list");
+    var ans = document.getElementById("answer");
+    var average = sumit() / sel.length;
+    ans.value = average;
+}
+function maxit() {
+    var sel = document.getElementById("list");
+    var max = -Infinity;
+
+    for (var x = 0; x < sel.length; x++) {
+        var number = parseInt(sel.options[x].text);
+        if (number > max) {
+            max = number;
+        }
+    }
+    document.getElementById("answer").value = max;
+}
+function minit() {
+    var sel = document.getElementById("list");
+    var min = Infinity;
+
+    for (var x = 0; x < sel.length; x++) {
+        var number = parseInt(sel.options[x].text);
+        if (number < min) {
+            min = number;
+        }
+    }
+    document.getElementById("answer").value = min;
+}
+</script> 
+</head>
+<body>
+<table border="2">
+<tr>
+<td><input type="text" id="num1" /></td>
+<td>
+<input type="button" value="Add->" onClick="addit();"/><br/>
+<input type="button" value="<-Remove" onClick="removeit();" /><br />
+<input type="button" value="Clear" onClick="clearit();" /><br /> </td>
+<td><select size="4" id="list"></select></td>
+</tr>
+<tr>
+<td></td>
+<td><input type="button" value="Sum" onClick="sumit();" /> </td>
+<td><input type="button" value="Average" onclick="averageit();"/></td>
+<td><input type="button" value="Max" onclick="maxit();"/></td>
+<td><input type="button" value="Min" onclick="minit();"/></td>
+<td><input type="text" id="answer" readonly /></td>
+</tr>
+</table>
+<br />
+</body> 
+</html>

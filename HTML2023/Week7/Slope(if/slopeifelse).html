@@ -1,0 +1,42 @@
+<html>
+    <script>
+        function calcSlope() {
+            x1 = parseFloat(document.getElementById("x1").value);
+            x2 = parseFloat(document.getElementById("x2").value);
+            y1 = parseFloat(document.getElementById("y1").value)
+            y2 = parseFloat(document.getElementById("y2").value);
+            slope = (y2 - y1) / (x2 - x1);
+            document.getElementById("slope").value = slope;
+
+            if (slope > 0) {
+                document.getElementById("prop").value = "pos.";
+            }
+            else if (slope < 0) {
+                document.getElementById("prop").value = "neg.";
+            }
+            else {
+                document.getElementById("prop").value = "It's 0"
+            }
+
+        }
+    </script>
+    <body>
+        Slope if/else 
+        <br />
+        x1: <input type="text" id="x1"/>
+        <br />
+        x2: <input type="text" id="x2"/>
+        <br />
+        y1: <input type="text" id="y1"/>
+        <br />
+        y2: <input type="text" id="y2"/>
+        <br />
+        <input type="button" value="calculate" onclick="calcSlope();" />
+        <br />
+        slope: <input type="text" id="slope"/>
+        <br />
+        Is it negative, positive, or zero? <br />
+        <input type="test" id="prop"/>
+        
+    </body>
+</html>

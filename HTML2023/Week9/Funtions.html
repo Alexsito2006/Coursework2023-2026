@@ -1,0 +1,43 @@
+<html>
+<head>
+<script>
+function perimiterRectangle(Length, Width)  {
+    Perimiter = 2 * Length * 2 * Width;
+    return Perimiter;
+}
+function calculatePerimiter()   {
+    L = parseFloat(document.getElementById("length").value);
+    W = parseFloat(document.getElementById("width").value);
+    Perimiter = perimiterRectangle(L, W);
+    document. getElementById("perimiter").value = Perimiter;
+}
+function areaRetangle(Length, Width) {
+    Area = Length * Width;
+    return Area;
+}
+function calculateArea() {
+    L = parseFloat(document.getElementById("length").value);
+    W = parseFloat(document.getElementById("width").value);
+    area = areaRetangle(L, W);
+    document. getElementById("area").value = area;
+
+}
+</script>
+ </head>
+<body>
+    Retangle Program
+    <br />
+    Length: <input type="text" id="length"/>
+    <br>
+    Width: <input type="text" id="width"/>
+    <br>
+    Area button: <input type="button" value="calculate" onclick="calculateArea();"/>
+    <br>
+    Perimiter button: <input type="button" value="calculate" onclick="calculatePerimiter();"/>
+    <br>
+    Perimiter: <input type="text" id="perimiter"/>
+    <br>
+    Area: <input type="text" id="area"/>
+   
+</body>
+</html>

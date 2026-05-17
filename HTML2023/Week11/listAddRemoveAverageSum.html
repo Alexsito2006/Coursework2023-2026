@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+<p id="demo"></p>
+<p id="thesum"></p>
+<script>
+nums = [3, 6, 9, 5, 8, 0];
+theTotal = 0;
+for (index = 0; index < nums.length; index++) {
+    nums[index] = nums[index] * 2;
+    
+}
+for (index = 0; index < nums.length; index++) {
+    theTotal = theTotal + nums[index];
+}
+document.getElementById("demo").innerHTML = nums[1];
+document.getElementById("thesum").innerHTML = theTotal;
+</script>
+</body> </html>
+

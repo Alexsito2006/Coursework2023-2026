@@ -1,0 +1,34 @@
+<html>
+<head>
+<script>
+function addNumbers()
+{
+    t1 = parseInt(document.getElementById('num').value);
+    thesum = 0;
+    for (let index = 0; index <= t1; index++) {
+        thesum = thesum + index;
+    }
+
+    let i = 1; 
+    thesum2 = 0;
+    while (i <= t1)
+    {
+        thesum2 = thesum2 + i;
+        i = i + 1;
+    }
+    document.getElementById('thesum').value = thesum;
+    document.getElementById('thesum2').value = thesum2;
+}
+</script>
+ </head>
+<body>
+Summing Program <br />
+Number: <input type="text" id="num" />
+<br />
+<input type="button" value="calculate" onclick="addNumbers();" />
+<br />
+Sum(For loop): <input type="text" id="thesum" />
+<br />
+Sum(While Loop): <input type="text" id="thesum2" />
+</body>
+</html>

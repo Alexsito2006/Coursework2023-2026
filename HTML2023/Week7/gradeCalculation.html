@@ -1,0 +1,44 @@
+<html>
+    <title>Grade Calc</title>
+    <script>
+        function calcGrade()
+        {
+            t1 = parseFloat(document.getElementById("test1").value);
+            t2 = parseFloat(document.getElementById("test2").value);
+            t3 = parseFloat(document.getElementById("test3").value);
+            average = (t1 + t2 + t3) / 3; 
+            document.getElementById("average").value = average;
+            grade = ""
+            if (average >= 90) {
+                document.getElementById("grade").value = "A"; 
+            }
+            else if (average >= 80 && average < 90) {
+                document.getElementById("grade").value = "B"; 
+            }
+            else if (average >= 70 && average < 80) {
+                document.getElementById("grade").value = "C"; 
+            }
+            else if (average >= 60 && average < 70) {
+                document.getElementById("grade").value = "D"; 
+            }
+            else {
+                document.getElementById("grade").value = "failed";
+            }
+        }
+    </script>
+    <body>
+        Grade Calculation <br />
+        test 1: <input type="text" id="test1"/>
+        <br />
+        test 2: <input type="text" id="test2"/>
+        <br />
+        test 3: <input type="text" id="test3"/>
+        <br />
+    </body>
+    <input type="button" value="calculate" 
+        onclick="calcGrade();"/> <br />
+    average: <input type="text" id="average"/>
+        <br />
+    Grade: <input type="text" id="grade"/> 
+
+</html>
